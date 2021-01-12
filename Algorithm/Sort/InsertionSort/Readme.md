@@ -18,4 +18,4 @@ Insertion-Sort(A)
 
 ## 수행 시간 분석
 
-직관적으로 보았을 때, 어떠한 입력이 들어오더라도 중첩된 $for$문을 모두 돌아야 하므로 $\theta(n^2)$의 시간이 걸린다.
+직관적으로 보았을 때, 어떠한 입력이 들어오더라도 중첩된 `for loop`을 모두 돌아야 하므로 ![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;\theta(n^2))의 시간이 걸린다.

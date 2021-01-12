@@ -4,11 +4,11 @@
 
 정렬 문제는 다음과 같이 정의한다.
 
-**입력:** 숫자 $n$개로 이루어진 수열 $<a_1,a_2,...,a_n>$
+**입력:** 숫자 n개로 이루어진 수열 ![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;<a_1,a_2,...,a_n>)
 
-**출력:** 입력 수열 $<a'_1,a'_2,...,a'_n>$을  $a'_1 \le a'_2 \le ... \le a'_n$으로 재배치한 순열
+**출력:** 입력 수열 ![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;<a'_1,a'_2,...,a'_n>)을  ![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;a'_1&space;\le&space;a'_2&space;\le&space;...&space;\le&space;a'_n)으로 재배치한 순열
 
-입력은 원소 수가 $n$개인 배열로 주어지지만, 연결 리스트와 같이 다른 형태로 주어지기도 한다.
+입력은 원소 수가 n개인 배열로 주어지지만, 연결 리스트와 같이 다른 형태로 주어지기도 한다.
 
 ## 정렬이 필요한 이유
 
@@ -28,10 +28,10 @@
 
 |알고리즘|최악의 경우 수행시간|평균/기대 수행시간
 |:---|:---|:---|
-|Insertion Sort|$\theta(n^2)$|$\theta(n^2)$|
-|Merge Sort|$\theta(n\log{n})$|$\theta(n\log{n})$|
-|Heap Sort|$\theta(n\log{n})$|-|
-|Quick Sort|$\theta(n^2)$|$\theta(n\log{n})$ (기대 수행 시간)|
-|Counting Sort|$\theta(k+n)$|$\theta(k+n)$|
-|Radix Sort|$\theta(d(n+k))$|$\theta(d(n+k))$|
-|Bucket Sort|$\theta(n^2)$|$\theta(n)$ (평균 수행 시간)|
+|Insertion Sort|![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;\theta(n^2))|![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;\theta(n^2))|
+|Merge Sort|![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;\theta(n\log{n}))|![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;\theta(n\log{n}))|
+|Heap Sort|![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;\theta(n\log{n}))|-|
+|Quick Sort|![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;\theta(n^2))|![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;\theta(n\log{n})) (기대 수행 시간)|
+|Counting Sort|![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;\theta(k&plus;n))|![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;\theta(k&plus;n))|
+|Radix Sort|![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;\theta(d(n&plus;k)))|![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;\theta(d(n&plus;k)))|
+|Bucket Sort|![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;\theta(n^2))|![equation](https://latex.codecogs.com/svg.latex?\dpi{120}&space;\theta(n)) (평균 수행 시간)|
