@@ -1,3 +1,9 @@
+/**
+ * Insertion Sort 구현
+ * 
+ * @author Juhui Kim
+ * @version 1.0
+*/
 #include <iostream>
 #include <vector>
 using namespace std;
