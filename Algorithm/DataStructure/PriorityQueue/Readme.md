@@ -126,3 +126,5 @@ MAX-HEAP-INSERT(A, key)
 #### 수행 시간 분석
 
 `MAX-HEAP-INSERT` 함수는 `HEAP-INCREASE-KEY` 함수에 의해 수행 시간의 상한이 ![equation](https://latex.codecogs.com/svg.latex?O(\log{n})) 이다.
+
+>   T. Cormen, C. Leiserson, R. Rivest and C. Stein, 『Introduction to Algorithms, 문병로, 심규석, 이충세 옮김, 한빛아카데미(2014), p153-p171<br>

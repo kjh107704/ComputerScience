@@ -289,3 +289,6 @@ node의 수가 매우 많을 경우를 생각해 보면, 다음의 공식을 이
     만약, 1부터 시작할 경우, 아래의 노드들이 max-heap 특성을 만족하는지를 보장할 수 없다. 
 
     leaf node들은 원소가 1개인 heap으로 볼 수 있으므로, max-heap 특성을 만족한다고 할 수 있다. 따라서, leaf node 바로 위에 있는 원소에서부터 시작하여 1까지 감소시켜야 한다.
+
+>   T. Cormen, C. Leiserson, R. Rivest and C. Stein, 『Introduction to Algorithms, 문병로, 심규석, 이충세 옮김, 한빛아카데미(2014), p153-p171<br>
+> CLRS Solutions, "Introduction to Algorithms solution", https://sites.math.rutgers.edu/~ajl213/CLRS/CLRS.html, (2021.01.14)
