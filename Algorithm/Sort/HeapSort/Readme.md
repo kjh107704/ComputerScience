@@ -70,5 +70,5 @@ HEAP-SORT(A)
 
   사실 heap sort는 최악의 경우와 최선의 경우 모두 ![equation](https://latex.codecogs.com/svg.latex?O(\log{n})) 의 시간이 걸리므로, 입력 자료의 상태와 상관 없이 ![equation](https://latex.codecogs.com/svg.latex?O(\log{n})) 의 수행 시간이 보장되어 있다.
 
->   T. Cormen, C. Leiserson, R. Rivest and C. Stein, 『Introduction to Algorithms, 문병로, 심규석, 이충세 옮김, 한빛아카데미(2014), p153-p171<br>
+>   T. Cormen, C. Leiserson, R. Rivest and C. Stein, 『Introduction to Algorithms』, 문병로, 심규석, 이충세 옮김, 한빛아카데미(2014), p153-p171<br>
 > CLRS Solutions, "Introduction to Algorithms solution", https://sites.math.rutgers.edu/~ajl213/CLRS/CLRS.html, (2021.01.14)
