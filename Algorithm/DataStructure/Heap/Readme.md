@@ -16,12 +16,13 @@
       - [수행 시간 분석](#수행-시간-분석-1)
         - [단순 분석](#단순-분석)
         - [정확한 분석](#정확한-분석)
+  - [생각해 볼 문제](#생각해-볼-문제)
 
 ****
 
 ## Heap의 기본 개념
 
-(binary) heap 자료구조는 **complete binary tree**로 볼 수 있는 배열 객체이다.
+(binary) heap 자료구조는 **complete binary tree**특성을 가지는 배열 객체이다.
 
 ### Heap 객체 구성 요소
 
@@ -192,3 +193,96 @@ node의 수가 매우 많을 경우를 생각해 보면, 다음의 공식을 이
 ![equation](https://latex.codecogs.com/svg.latex?O(n\sum_{h=0}^{\left&space;\lfloor&space;\log{n}&space;\right&space;\rfloor}\frac{h}{2^{h}})=O(n\sum_{h=0}^{\infty}\frac{h}{2^h})=O(2n)=O(n))
 
 이므로, `BUILD-MAX-HEAP`의 수행 시간의 상한은 ![equation](https://latex.codecogs.com/svg.latex?O(n)) 이다.
+
+## 생각해 볼 문제
+
+1. **높이가 h인 heap의 최대, 최소 원소 수는 각각 얼마인가? (6.1-1)**
+
+    binary heap 자료구조는 complete binary tree를 기반으로 한다. 
+
+    만약, heap의 높이가 ![equation](https://latex.codecogs.com/svg.latex?h) 라면, complete binary tree 특성에 의하여 높이 ![equation](https://latex.codecogs.com/svg.latex?h-1) 까지는 모든 node가 존재한다.
+
+    이때, 높이 ![equation](https://latex.codecogs.com/svg.latex?h-1) 까지의 node 개수는 아래의 계산에 의해 ![equation](https://latex.codecogs.com/svg.latex?2^{h}-1) 이다.
+
+    ![equation](https://latex.codecogs.com/svg.latex?2^{0}&plus;2^{1}&plus;...&plus;2^{h-1}&space;=&space;\sum_{h=0}^{h-1}2^{h}=\frac{2^{h}-1}{2-1}=2^{h}-1)
+
+    여기에 높이 h에는 최소 1개의 원소부터 ![equation](https://latex.codecogs.com/svg.latex?2^{h}) 개의 원소가 있을 수 있다.
+
+    따라서 이를 조합하면, 
+    
+    높이가 h인 heap의 최소 원소 수는 ![equation](https://latex.codecogs.com/svg.latex?2^{h}&space;(\because&space;(2^{h}-1)&plus;1)) 이며, 
+    
+    최대 원소 수는 ![equation](https://latex.codecogs.com/svg.latex?2^{h&plus;1}-1(\because&space;(2^{h}-1)&plus;2^{h})) 이다.
+
+2. **원소의 수가 n인 heap의 높이는 ![equation](https://latex.codecogs.com/svg.latex?\left&space;\lfloor&space;\log{n}&space;\right&space;\rfloor) 임을 보여라. (6.1-2)**
+
+    m이 가능한 한 가장 큰 수일 경우, n을 다음과 같이 변형해서 쓸 수 있다.
+
+    ![equation](https://latex.codecogs.com/svg.latex?n=2^{m}-1&plus;k)
+
+    위 식이 뜻하는 바를 살펴보면, heap은 complete binary tree를 기반으로 하기 때문에 높이가 m-1인 full binary tree에 k개의 leaf node가 아래쪽에 추가된 꼴이다.
+
+    따라서, 높이가 m-1인 complete binary tree에 leaf node로 높이가 1 추가되었으므로, 전체 heap의 높이는 m이 된다.
+
+    ![equation](https://latex.codecogs.com/svg.latex?m&space;=&space;\left&space;\lfloor&space;\log{n}&space;\right&space;\rfloor) 이므로, 원소의 수가 n인 heap의 높이는 ![equation](https://latex.codecogs.com/svg.latex?\left&space;\lfloor&space;\log{n}&space;\right&space;\rfloor) 임을 알 수 있다.
+
+3. **max heap에서 모든 원소가 서로 다를 때 가장 작은 원소는 어디에 존재하는가? (6.1-4)**
+
+    모든 원소가 서로 다를 때, 가장 작은 원소는 max heap의 leaf node에 존재한다.
+
+4. **원소 수가 n개인 힙을 배열로 나타낼 때 ![equation](https://latex.codecogs.com/svg.latex?\left&space;\lfloor&space;\frac{n}{2}&space;\right&space;\rfloor&plus;1,\left&space;\lfloor&space;\frac{n}{2}&space;\right&space;\rfloor&plus;2,...,n)번째 노드가 leaf node임을 보여라. (6.1-7)**
+
+    leaf node는 child node가 없는 node를 뜻한다.
+
+    따라서, 해당 index를 가진 node들이 leaf node임을 보이기 위해서는 child node가 없음을 보이면 된다.
+
+    만약, 임의의 i번째 node를 선택한다고 가정해 보자. 단, i의 조건은 다음과 같다.
+
+    ![equation](https://latex.codecogs.com/svg.latex?\left&space;\lfloor&space;\frac{n}{2}\right&space;\rfloor&plus;1\leq&space;i&space;\leq&space;n)
+
+    i번째 node의 left child는 2i 번째 node이며, right child는 2i + 1 번째 node임을 이용한다.
+
+    위의 식의 모든 항에 2를 곱할 경우, 아래와 같이 i는 항상 n보다 크게 됨을 알 수 있다.
+
+    ![equation](https://latex.codecogs.com/svg.latex?n<&space;2\left&space;\lfloor&space;\frac{n}{2}\right&space;\rfloor&plus;2\leq&space;2i&space;\leq&space;2n)
+
+    이에 따라 left child인 2i 번째 node는 heap 내부에 존재하지 않고, 마찬가지로 right child인 2i + 1 번째 node도 heap 내부에 존재하지 않는다.
+
+    따라서, ![equation](https://latex.codecogs.com/svg.latex?\left&space;\lfloor&space;\frac{n}{2}&space;\right&space;\rfloor&plus;1,\left&space;\lfloor&space;\frac{n}{2}&space;\right&space;\rfloor&plus;2,...,n) 번째 node들은 child node가 존재하지 않으므로, leaf node이다.
+
+5. **원소 ![equation](https://latex.codecogs.com/svg.latex?A[i])가 자식들보다 클 때 `MAX-HEAPIFY(A, i)`를 호출한 결과는 얼마인가? (6.2-3)**
+
+    배열에 변화가 생기지 않는다.
+
+6. **`MAX-HEAPIFY`의 코드를 재귀 호출을 사용하지 않고, 반복 제어 구조(루프)를 사용해 효율적인 `MAX-HEAPIFY`를 작성하라. (6.2-5)**
+
+    ```
+    ITERATIVE-MAX-HEAPIFY(A, i)
+
+        while i < A.heap-size
+            l = LEFT(i)
+            r = RIGHT(i)
+
+            if l <= A.heap-size and A[l] >= A[i]
+                largest = l
+            else
+                largest = i
+
+            if r <= A.heap-size and A[r] >= A[largest]
+                largest = r
+
+            if largest != i
+                exchange A[largest] with A[i]
+                i = largest
+            else
+                return A
+
+        return A
+    ```
+7. `BUILD-MAX-HEAP`의 2행에서, index i를 1부터 ![equation](https://latex.codecogs.com/svg.latex?\left&space;\lfloor&space;A.length/2&space;\right&space;\rfloor) 까지 증가시키지 않고 ![equation](https://latex.codecogs.com/svg.latex?\left&space;\lfloor&space;A.length/2&space;\right&space;\rfloor) 부터 1까지 감소시키는 이유는 무엇인가? (6.3-2)
+
+    `BUILD-MAX-HEAP`은 배열이 max-heap 특성을 만족하도록 바꾸는 함수이다.
+
+    만약, 1부터 시작할 경우, 아래의 노드들이 max-heap 특성을 만족하는지를 보장할 수 없다. 
+
+    leaf node들은 원소가 1개인 heap으로 볼 수 있으므로, max-heap 특성을 만족한다고 할 수 있다. 따라서, leaf node 바로 위에 있는 원소에서부터 시작하여 1까지 감소시켜야 한다.
