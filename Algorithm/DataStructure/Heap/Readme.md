@@ -174,6 +174,9 @@ BUILD-MAX-HEAP(A)
 이 분석에서는 다음을 이용한다.
 
 1. 원소가 n개인 heap의 높이는 ![equation](https://latex.codecogs.com/svg.latex?\left&space;\lfloor&space;\log{n}&space;\right&space;\rfloor) 이다.
+   
+   이에 대한 자세한 설명은 [생각해 볼 문제 2번](#생각해-볼-문제) 을 참고하라.
+
 2. 높이가 h인 노드 수는 최대 ![equation](https://latex.codecogs.com/svg.latex?\left&space;\lceil&space;\frac{n}{2^{h&plus;1}}&space;\right&space;\rceil) 이다.
 
 높이가 h인 node에서 호출된 `MAX-HEAPIFY`의 수행시간은 ![equation](https://latex.codecogs.com/svg.latex?O(h))이다. 
