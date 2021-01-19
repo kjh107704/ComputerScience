@@ -87,7 +87,7 @@ struct MinHeap{
 
         heap[i] = key;
 
-        while(i <= 2 && heap[getParent(i)] > heap[i]){
+        while(i >= 2 && heap[getParent(i)] > heap[i]){
             swap(heap[getParent(i)], heap[i]);
             i = getParent(i);
         }
