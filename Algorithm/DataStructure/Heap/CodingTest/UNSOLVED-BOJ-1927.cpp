@@ -4,25 +4,28 @@
  * @link https://www.acmicpc.net/problem/1927
  * @author Juhui Kim
  * 
- * 1st - runtime error
+ * 1st - runtime error : vector 사용 때문 예측, 배열로 바꿈
+ * 2nd - wrong answer : line92 index 부등호 틀린 것 고침, 디버그 때문에 vector로 바꿈
+ * 3rd - runtime error : vector 사용 때문 예측, 배열로 바꿈
+ * 4th - correct answer
  */
 
 #include <iostream>
-#include <vector>
 #include <cmath>
-#define INF 2147483648
+#define INF 1ULL<<31
+#define MAX 100001
 using namespace std;
 
 struct MinHeap{
 
     private:
-        vector<int> heap;
+        int heap[MAX];
         int heapsize;
 
     public:
 
     MinHeap(){
-        heap = vector<int>(1,0);
+        heap[0] = 0;
         heapsize = 0;
     }
 
@@ -101,7 +104,7 @@ struct MinHeap{
         setHeapSize(getHeapSize() + 1);
 
         // 원래는 INF 값으로 initialize 해야 하지만, vector의 type이 int 이므로 INF-1 삽입.
-        heap.push_back(INF-1);
+        heap[getHeapSize()] = (INF) - 1;
         
         decreaseKey(getHeapSize(), x);
     }
