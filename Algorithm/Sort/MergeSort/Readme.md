@@ -84,7 +84,7 @@ n개의 수를 정렬하는 merge sort에서 수행시간 ![equation](https://la
 
 따라서, merge sort의 수행시간 ![equation](https://latex.codecogs.com/svg.latex?T(n))에 대한 점화식은 다음과 같다.
 
-![equation](https://latex.codecogs.com/svg.latex?T(n)=&space;\begin{cases}&space;\theta(1),&space;&&space;\text{if}\&space;n=1&space;\\&space;2T(n/2)&plus;cn,&space;&&space;\text{if}\&space;n>1&space;\end{cases})
+![equation](https://latex.codecogs.com/svg.latex?T(n)=&space;\left\\{\begin{matrix}&space;\theta(1)&space;&&space;\text{if}\&space;n=1&space;\\\\&space;2T(n/2)&plus;cn&space;&&space;\text{if}\&space;n>1&space;\end{matrix}\right.)
 
 위 점화식을 마스터 정리 경우 2를 이용하여 풀면, ![equation](https://latex.codecogs.com/svg.latex?T(n)=\theta(n\log{n}))이므로, n개의 수를 정렬하는 merge sort의 수행 시간은 ![equation](https://latex.codecogs.com/svg.latex?\theta(n\log{n}))이다.
 
