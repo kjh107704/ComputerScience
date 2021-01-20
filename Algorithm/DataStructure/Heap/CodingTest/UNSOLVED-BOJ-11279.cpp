@@ -5,6 +5,7 @@
  * @author Juhui Kim
  * 
  * 1st - runtime error: line 128이 주석처리 되어있어 배열 원소 초기화가 안 된 상태에서 원소를 참조하는 경우 발생
+ * 2nd - solved
  */
 
 #include <iostream>
