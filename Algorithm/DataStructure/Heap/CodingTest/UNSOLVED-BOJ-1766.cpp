@@ -15,14 +15,15 @@ int main()
 {
     // 문제의 수
     int N;
-    //problem_info[a] = {b, c, d} : 문제 a를 먼저 풀어야 b, c, d를 풀 수 있음
-    vector<vector<int>> problem_info(N+1, vector<int>(0));
-    //problem_cnt[a] = 3 : 문제 a를 풀기 전에 먼저 풀어야 할 문제가 3개 남음
-    vector<int> problem_cnt(N+1,0);
 
     // 정보의 개수
     int M;
     scanf("%d %d", &N, &M);
+
+    //problem_info[a] = {b, c, d} : 문제 a를 먼저 풀어야 b, c, d를 풀 수 있음
+    vector<vector<int>> problem_info(N+1, vector<int>(0));
+    //problem_cnt[a] = 3 : 문제 a를 풀기 전에 먼저 풀어야 할 문제가 3개 남음
+    vector<int> problem_cnt(N+1,0);
 
     // 문제 A를 문제 B보다 먼저 푸는 것이 좋음
     int A, B;
