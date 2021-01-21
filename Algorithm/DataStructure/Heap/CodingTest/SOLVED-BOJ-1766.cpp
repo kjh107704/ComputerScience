@@ -5,6 +5,7 @@
  * @author Juhui Kim
  * 
  * 1st - runtime error (OutOfBounds)
+ * 2nd - solved
  */
 #include <iostream>
 #include <queue>
