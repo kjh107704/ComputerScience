@@ -170,3 +170,5 @@ RANDOMIZED-QUICK-SORT(A, p, r)
 하지만, `RANDOMIZED-QUICK-SORT`는 알고리즘의 랜덤화를 통해 `key`값을 무작위로 뽑아 알고리즘의 수행시간이 입력값에 의해 결정되지 않도록 하는데에 의의가 있다.
 
 `RANDOMIZED-QUICK-SORT`의 경우, 확률적 분석을 통하여 평균적인 경우의 수행 시간을 분석할 수 있다.
+
+> T. Cormen, C. Leiserson, R. Rivest and C. Stein, 『Introduction to Algorithms』, 문병로, 심규석, 이충세 옮김, 한빛아카데미(2014), p173-p191<br>
